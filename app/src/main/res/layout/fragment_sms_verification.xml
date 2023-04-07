@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/frameLayout2"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SmsVerificationFragment">
+
+    <TextView
+        android:id="@+id/phone_num_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.32999998" />
+
+    <TextView
+        android:id="@+id/ver_code_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Verification Code"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toTopOf="@+id/next_to_result_bt"
+        app:layout_constraintEnd_toEndOf="@+id/phone_num_text_view"
+        app:layout_constraintStart_toStartOf="@+id/phone_num_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/phone_num_text_view" />
+
+    <Button
+        android:id="@+id/next_to_result_bt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/phone_num_text_view"
+        app:layout_constraintVertical_bias="0.65999997" />
+
+    <EditText
+        android:id="@+id/ver_code"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="49dp"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@+id/next_to_result_bt"
+        app:layout_constraintEnd_toEndOf="@+id/ver_code_text_view"
+        app:layout_constraintStart_toStartOf="@+id/ver_code_text_view"
+        app:layout_constraintTop_toBottomOf="@+id/ver_code_text_view" />
+</androidx.constraintlayout.widget.ConstraintLayout>

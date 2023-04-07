@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/phoneNumFragment">
+
+    <fragment
+        android:id="@+id/phoneNumFragment"
+        android:name="com.example.timercounter.PhoneNumFragment"
+        android:label="fragment_phone_num"
+        tools:layout="@layout/fragment_phone_num" >
+        <action
+            android:id="@+id/action_phoneNumFragment_to_smsVerificationFragment"
+            app:destination="@id/smsVerificationFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/smsVerificationFragment"
+        android:name="com.example.timercounter.SmsVerificationFragment"
+        android:label="fragment_sms_verification"
+        tools:layout="@layout/fragment_sms_verification" >
+        <action
+            android:id="@+id/action_smsVerificationFragment_to_resultFragment"
+            app:destination="@id/resultFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/smsVerificationFragment"
+            app:popUpToInclusive="true" />
+        <argument
+            android:name="phonenum"
+            app:argType="string" />
+    </fragment>
+    <fragment
+        android:id="@+id/resultFragment"
+        android:name="com.example.timercounter.ResultFragment"
+        android:label="fragment_result"
+        tools:layout="@layout/fragment_result" >
+        <argument
+            android:name="result_phone_num"
+            app:argType="string" />
+        <argument
+            android:name="result_vecode_num"
+            app:argType="string" />
+    </fragment>
+</navigation>
